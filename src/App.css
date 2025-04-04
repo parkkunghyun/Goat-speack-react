@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-[#E6F5F0] text-black;
+}
+
+.dark body {
+  @apply bg-gray-900 text-white;
+}
+
+button {
+  @apply bg-gray-900 text-white h-full p-2 rounded-b cursor-pointer;
+}
+
+.dark button {
+  @apply bg-white text-black h-full p-2 rounded-b cursor-pointer;
+}

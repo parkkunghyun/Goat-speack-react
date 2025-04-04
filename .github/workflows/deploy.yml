@@ -1,0 +1,28 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main  # 또는 원하는 배포 브랜치
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v3
+
+      - name: Node.js 설정
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: 의존성 설치 및 빌드
+        run: |
+          npm install
+          npm run build
+
+      - name: Vercel 배포 트리거
+        run: |
+          curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
