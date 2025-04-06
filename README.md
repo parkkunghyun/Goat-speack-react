@@ -1,34 +1,62 @@
-# Goat Speak
+# 🐐 Goat Speak
 
-**Goat Speak**는 텍스트를 실시간으로 다양한 언어로 번역하고 자연스러운 음성으로 전달하는 파파고를 분석해서 만든 번역 플랫폼입니다.
+Goat Speak는 텍스트를 실시간으로 다양한 언어로 번역하고 자연스러운 음성으로 전달하는 파파고를 분석해 만든 번역 플랫폼입니다.
 
-[링크 바로가기](https://lingualens-266457465664.us-central1.run.app/)
+## 📎 프로젝트 바로가기  
+👉 [https://goat-speack-react.vercel.app/](https://goat-speack-react.vercel.app/)
+---
 
-## 📄 프로젝트 설명
-LinguaLens는 **Google Cloud Translate API**를 활용하여 다양한 언어로 번역을 지원합니다. 또한 **TTS (Text-to-Speech)** 기술로 번역된 텍스트를 자연스러운 음성으로 변환해줍니다.
+## 📄 프로젝트 소개
+
+Goat Speak는 Google Cloud Platform(GCP)의 다양한 API를 활용해  
+실시간 텍스트 번역과 음성 변환 기능을 제공하는 번역 서비스입니다.  
+Recoil과 React Query를 적극 활용해 상태 관리와 서버 데이터 관리를 최적화하였습니다.
+
+---
 
 ## 🚀 주요 기능 및 특징
 
-- **다국어 번역 및 음성 변환**  
-  - **Google Cloud Vision API**로 이미지 내 텍스트 추출
-  - **Translate API**로 다양한 언어로 번역 지원
-  - **Text-to-Speech API**로 자연스러운 음성 변환
+### 1. 실시간 다국어 번역 & 음성 변환
+- Google Cloud Translate API를 활용한 다양한 언어 번역
+- Google Cloud Text-to-Speech API를 통한 음성 변환
+- Hook 기반 API 요청 처리 및 관리
 
-- **CI/CD 자동화**  
-  - **GitHub Actions**를 활용한 프론트엔드 자동 빌드 및 Cloud Run 배포
-  - 지속적인 배포 환경으로 개발 효율성 향상
+### 2. 다크 모드 지원
+- Recoil 전역 상태 관리 + LocalStorage 저장
+- 사용자 환경에 따라 다크/라이트 모드 자동 적용
 
-- **프론트엔드 기능 개선**  
-  - **React의 useEffect 훅**으로 번역된 텍스트 실시간 출력 및 자동 음성 재생
-  - **React Toastify**로 실시간 알림 제공하여 인터랙티브한 UI 구현
+### 3. 효율적인 상태 관리 및 데이터 최적화
+|기술|설명|
+|---|---|
+|Recoil|글로벌 상태 관리 (다크 모드 등)|
+|React Query|서버 상태 관리, 데이터 캐싱|
+|TypeScript|안정적인 타입 기반 설계|
+|Tailwind CSS|반응형 스타일링 및 빠른 개발|
 
-- **효율적인 데이터 관리**  
-  - **Tanstack Query**로 번역 API 호출을 효율적으로 관리하고 에러 처리 간소화
-  - 서버사이드에서 **Google Translate API** 호출로 클라이언트와 분리된 구조 유지, 보안 강화 및 API 호출 최적화
+---
 
-## ⚙️ 기술 스택
+## 🛠️ 기술 스택
 
-- **Frontend:** React, recoil, Tanstack Query, React Toastify
-- **GCP API:** Translate API, Text-to-Speech API
-- **Deployment:** GitHub Actions, Vercel
+|구분|기술|
+|---|---|
+|Frontend|React, TypeScript, Vite|
+|상태관리|Recoil, React Query|
+|API|Google Cloud API (Translate, Text-to-Speech)|
+|스타일링|Tailwind CSS|
+|배포|Vercel|
+
+---
+
+## 📝 개발 과정 및 설계 방식
+
+1. 프로젝트 초기 세팅 (Recoil, React Query 기반)
+2. 다크 모드 전역 상태 관리 설계
+3. UI 컴포넌트 설계 및 구현
+4. API 별 Custom Hook 설계 및 처리
+   - Copy API
+   - Translate API
+   - Text-to-Speech API
+5. 에러 및 예외 상황 UX 처리 (toast 알림 등)
+
+---
 
